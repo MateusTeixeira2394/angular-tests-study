@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LikeWidgetComponent } from './components/like-widget/like-widget.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LikeWidgetComponent
   ],
   imports: [
     BrowserModule,
