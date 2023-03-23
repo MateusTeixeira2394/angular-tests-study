@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'study-tests-study';
+
+  public likes: number = 0;
+
+  public like(): void {
+    this.likes++;
+  }
+
 }
