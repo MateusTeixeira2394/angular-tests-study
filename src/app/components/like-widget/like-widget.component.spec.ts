@@ -24,13 +24,13 @@ describe(LikeWidgetComponent.name, () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should auto generate a id when the id input is missing', ()=>{
+  it(`Should auto-generate ID during ngOnInput when (@Input id) is not assigned`, ()=>{
 
     expect(component.id).toBeTruthy();
 
   });
 
-  it('Should NOT auto generate a id when the id input is present', ()=>{
+  it(`Should NOT auto-generate ID during ngOnInput when (@Input id) is assigned`, ()=>{
 
     const id: string = 'some-id';
 
@@ -39,6 +39,16 @@ describe(LikeWidgetComponent.name, () => {
     expect(component.id)
     .withContext(`component id: ${component.id}`)
     .toBe(id);
+
+  });
+
+  it(`should trigger (@Output liked) when it is called`, ()=>{
+
+    const spy: jasmine.Spy = spyOn(component.liked,"emit");
+
+    component.like();
+
+    expect(spy).toHaveBeenCalled();
 
   });
 
