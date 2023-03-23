@@ -1,0 +1,17 @@
+<div class="photo-frame-container">
+
+  <img
+    [src]="photo.src"
+    [alt]="photo.description"
+    class="photo"
+    tabindex="0"
+  />
+
+  <div class="like-bar">
+    <app-like-widget
+      [likes]="likes"
+      (liked)="like()"
+    ></app-like-widget>
+  </div>
+
+</div>
