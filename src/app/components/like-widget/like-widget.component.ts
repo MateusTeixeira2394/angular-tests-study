@@ -8,7 +8,7 @@ import { UuidService } from '../../services/uuid.service';
   templateUrl: './like-widget.component.html',
   styleUrls: ['./like-widget.component.css'],
 })
-export class LikeWidgetComponent implements OnInit{
+export class LikeWidgetComponent implements OnInit {
 
   @Output()
   public liked = new EventEmitter<void>();
@@ -23,11 +23,13 @@ export class LikeWidgetComponent implements OnInit{
     like: faThumbsUp
   };
 
-  constructor(private uuidService: UuidService) {};
+  public readonly ARIA_LABEL_TEXT: string = ': people liked';
+
+  constructor(private uuidService: UuidService) { };
 
   ngOnInit(): void {
 
-    if(!this.id){
+    if (!this.id) {
 
       this.id = this.uuidService.getIdwthPrefix('like-widget');
 

@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import {LikeWidgetComponent} from './components/like-widget/like-widget.component'
+import { PhotoFrameComponent } from './components/photo-frame/photo-frame.component';
 
 describe(`${AppComponent.name}`, () => {
 
@@ -18,7 +19,8 @@ describe(`${AppComponent.name}`, () => {
       ],
       declarations: [
         AppComponent,
-        LikeWidgetComponent
+        LikeWidgetComponent,
+        PhotoFrameComponent
       ],
     }).compileComponents();
 
