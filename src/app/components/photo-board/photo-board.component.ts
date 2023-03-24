@@ -9,7 +9,7 @@ import Photo from 'src/app/models/photo.interface';
 export class PhotoBoardComponent implements OnChanges {
 
   @Input()
-  public photos: Photo[] = [];
+  public photos: Photo[] | null = [];
 
   public rows: Photo[][] = [];
 

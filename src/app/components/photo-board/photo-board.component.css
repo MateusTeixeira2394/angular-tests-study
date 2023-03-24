@@ -1,8 +1,9 @@
 .photo-board-list{
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .photo-board-item{
-    width: 25vw;
+    width: 20vw;
 }

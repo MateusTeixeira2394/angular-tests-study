@@ -17,7 +17,7 @@ import Photo from 'src/app/models/photo.interface';
 export class PhotoFrameComponent implements OnInit, OnDestroy {
   @Input()
   public photo: Photo = {
-    src: '',
+    url: '',
     description: '',
   };
 

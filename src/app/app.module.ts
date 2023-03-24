@@ -8,6 +8,7 @@ import { LikeWidgetComponent } from './components/like-widget/like-widget.compon
 import { PhotoFrameComponent } from './components/photo-frame/photo-frame.component';
 import { AppActionsDirective } from './directives/app-actions.directive';
 import { PhotoBoardComponent } from './components/photo-board/photo-board.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PhotoBoardComponent } from './components/photo-board/photo-board.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [LikeWidgetComponent],
   bootstrap: [AppComponent]

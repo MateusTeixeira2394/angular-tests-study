@@ -1,5 +1,5 @@
 export default interface Photo {
   id?: number;
-  src: string;
+  url: string;
   description: string;
 }

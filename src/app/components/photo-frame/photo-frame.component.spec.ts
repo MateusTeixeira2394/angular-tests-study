@@ -78,7 +78,7 @@ describe(PhotoFrameComponent.name, () => {
     const IMG_ADDRESS: string = 'https://somesite.com/img.jpg';
 
     component.photo = {
-      src: IMG_ADDRESS,
+      url: IMG_ADDRESS,
       description: DESCRIPTION
     };
 
