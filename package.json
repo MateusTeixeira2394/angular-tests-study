@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test-ci": "ng test --watch=false --browsers ChromeHeadless",
-    "coverage":"ng test --no-watch --code-coverage"
+    "coverage": "ng test --no-watch --code-coverage"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +31,7 @@
     "@angular-devkit/build-angular": "^15.2.4",
     "@angular/cli": "~15.2.4",
     "@angular/compiler-cli": "^15.2.0",
+    "@types/angular": "^1.8.4",
     "@types/jasmine": "~4.3.0",
     "@types/uuid": "^9.0.1",
     "jasmine-core": "~4.5.0",

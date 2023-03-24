@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LikeWidgetComponent } from './components/like-widget/like-widget.component';
 import { PhotoFrameComponent } from './components/photo-frame/photo-frame.component';
 import { AppActionsDirective } from './directives/app-actions.directive';
+import { PhotoBoardComponent } from './components/photo-board/photo-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LikeWidgetComponent,
     PhotoFrameComponent,
-    AppActionsDirective
+    AppActionsDirective,
+    PhotoBoardComponent
   ],
   imports: [
     BrowserModule,

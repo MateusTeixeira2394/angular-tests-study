@@ -1,0 +1,8 @@
+.photo-board-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-board-item{
+    width: 25vw;
+}
