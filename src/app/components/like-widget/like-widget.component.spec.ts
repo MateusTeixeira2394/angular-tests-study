@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { LikeWidgetComponent } from './like-widget.component';
+import { AppActionsDirective } from '../../directives/app-actions.directive';
 
 describe(LikeWidgetComponent.name, () => {
 
@@ -10,7 +11,7 @@ describe(LikeWidgetComponent.name, () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LikeWidgetComponent],
+      declarations: [LikeWidgetComponent, AppActionsDirective],
       imports: [FontAwesomeModule]
     })
       .compileComponents();
@@ -52,7 +53,7 @@ describe(LikeWidgetComponent.name, () => {
 
   });
 
-  it(`(DOM) Should update the aria-label when the (@Input likes) is incremented`, () => {
+  it(`(UI) Should update the aria-label when the (@Input likes) is incremented`, () => {
 
     component.likes++;
 
@@ -64,7 +65,7 @@ describe(LikeWidgetComponent.name, () => {
 
   });
 
-  it(`(DOM) Should show the default text of aria-label`, () => {
+  it(`(UI) Should show the default text of aria-label`, () => {
 
     const element: HTMLElement = fixture.nativeElement.querySelector('span');
 
@@ -72,7 +73,7 @@ describe(LikeWidgetComponent.name, () => {
 
   });
 
-  it(`(DOM) Should increment the likes number when it is clicked`, done => {
+  it(`(UI) Should increment the likes number when it is clicked`, done => {
 
     component.liked.subscribe(() => {
 
@@ -94,7 +95,7 @@ describe(LikeWidgetComponent.name, () => {
 
   });
 
-  it(`(DOM) Should increment the likes number when the Enter keyboard is pressed`, done => {
+  it(`(UI) Should increment the likes number when the Enter keyboard is pressed`, done => {
 
     component.liked.subscribe(() => {
 

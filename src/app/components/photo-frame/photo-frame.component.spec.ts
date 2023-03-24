@@ -72,7 +72,7 @@ describe(PhotoFrameComponent.name, () => {
 
   });
 
-  it(`(DOM) Should show the image and the image description to the screen`, ()=>{
+  it(`(UI) Should show the image and the image description to the screen`, ()=>{
 
     const DESCRIPTION: string = 'Some description';
     const IMG_ADDRESS: string = 'https://somesite.com/img.jpg';
