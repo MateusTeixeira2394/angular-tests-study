@@ -8,7 +8,8 @@ import { LikeWidgetComponent } from './components/like-widget/like-widget.compon
 import { PhotoFrameComponent } from './components/photo-frame/photo-frame.component';
 import { AppActionsDirective } from './directives/app-actions.directive';
 import { PhotoBoardComponent } from './components/photo-board/photo-board.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { PhotosListComponent } from './views/photos-list/photos-list.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {HttpClientModule} from '@angular/common/http'
     LikeWidgetComponent,
     PhotoFrameComponent,
     AppActionsDirective,
-    PhotoBoardComponent
+    PhotoBoardComponent,
+    PhotosListComponent
   ],
   imports: [
     BrowserModule,

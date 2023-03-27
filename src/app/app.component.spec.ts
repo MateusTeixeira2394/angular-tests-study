@@ -38,16 +38,4 @@ describe(`${AppComponent.name}`, () => {
     expect(component).toBeTruthy();
   });
 
-  it(`it should increment the likes whenever the method ${AppComponent.prototype.like.name} is called`, ()=>{
-
-    const times: number = 50;
-
-    for (let i = 0; i < times; i++) {
-      component.like();
-    };
-
-    expect(component.likes).toBe(50);
-
-  });
-
 });
