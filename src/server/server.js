@@ -26,5 +26,5 @@ app.post('/photos/:id', (req, res) => {
 });
 
 http.createServer(app).listen(3000, function() {
-    console.log('Servidor running on port: ' + this.address().port);
+    console.log('Server running on port: ' + this.address().port);
 });

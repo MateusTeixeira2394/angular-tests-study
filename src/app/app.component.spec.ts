@@ -4,6 +4,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import {LikeWidgetComponent} from './components/like-widget/like-widget.component'
 import { PhotoFrameComponent } from './components/photo-frame/photo-frame.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PhotoBoardComponent } from './components/photo-board/photo-board.component';
 
 describe(`${AppComponent.name}`, () => {
 
@@ -15,12 +17,14 @@ describe(`${AppComponent.name}`, () => {
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        HttpClientModule
       ],
       declarations: [
         AppComponent,
         LikeWidgetComponent,
-        PhotoFrameComponent
+        PhotoFrameComponent,
+        PhotoBoardComponent
       ],
     }).compileComponents();
 

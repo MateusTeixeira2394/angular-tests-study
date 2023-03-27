@@ -1,6 +1,6 @@
 <div class="photo-board-container">
-    <ul class="photo-board-list">
-        <li class="photo-board-item" *ngFor="let photo of photos">
+    <ul class="photo-board-list" *ngFor="let row of rows">
+        <li class="photo-board-item" *ngFor="let photo of row">
             <app-photo-frame
                 [photo]="photo"
             ></app-photo-frame>
