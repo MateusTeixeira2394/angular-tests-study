@@ -1,25 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import Photo from 'src/app/models/photo.interface';
 
-import { PhotoBoardComponent } from './photo-board.component';
-import { PhotoFrameComponent } from '../photo-frame/photo-frame.component';
 import { SimpleChange, SimpleChanges } from '@angular/core';
-
-function getMockPhotos(): Photo[] {
-
-  let photos: Photo[] = [];
-
-  const SIZE: number = 7;
-
-  for (let i = 0; i < SIZE; i++) {
-
-    photos.push({ id: i + 1, description: '', url: '' });
-
-  };
-
-  return photos;
-
-};
+import getMockPhotos from 'src/app/utils/tests/getMockPhotos';
+import { PhotoFrameComponent } from '../photo-frame/photo-frame.component';
+import { PhotoBoardComponent } from './photo-board.component';
 
 describe(PhotoBoardComponent.name, () => {
 
@@ -43,7 +27,9 @@ describe(PhotoBoardComponent.name, () => {
 
   it('(UI) Should displays rows and columns when (@Input photos) has value', () => {
 
-    component.photos = getMockPhotos();
+    const SIZE: number = 7;
+
+    component.photos = getMockPhotos(SIZE);
 
     fixture.detectChanges();
 
