@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { delay, Observable } from 'rxjs';
 import Photo from '../models/photo.interface';
 import IPhotoService from '../models/photosService.interface';
 
@@ -16,7 +16,9 @@ export class PhotosService implements IPhotoService{
   ) { }
 
   public getPhotos(): Observable<Photo[]> {
-    return this.http.get<Photo[]>(this.SERVER_URL);
+    return this.http
+    .get<Photo[]>(this.SERVER_URL)
+    .pipe(delay(1000));
   };
   
 }
